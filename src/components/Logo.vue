@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container text-2xl md:text-5xl lg:text-7xl">
     <span class="prompt">$</span>
     <span class="httf"></span>
     <span class="text"></span>
@@ -65,7 +65,7 @@ export default {
 <style lang="postcss" scoped>
 
 .container {
-  @apply mt-10 ml-2 flex text-center relative text-5xl
+  @apply mt-10 ml-2 flex text-center relative;
 }
 
 .prompt {
