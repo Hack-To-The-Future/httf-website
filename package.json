@@ -1,0 +1,18 @@
+{
+  "name": "httf-website-vue3",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "gsap": "^3.5.1",
+    "tailwindcss": "^1.9.6",
+    "vue": "^3.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "vite": "^1.0.0-rc.1",
+    "eslint": "^7.12.0"
+  }
+}
