@@ -82,10 +82,17 @@ export default {
           this.playing = true
           break
         case 'desserts check':
-          this.lines.push({
-            type: CliMessage,
-            props: `Reminder: ${this.emoji}`
-          })
+          if (this.playing) {
+            this.lines.push({
+              type: CliMessage,
+              props: `Reminder: ${this.emoji}`
+            })
+          } else {
+            this.lines.push({
+              type: CliError,
+              props: `You're not playing desserts at the moment!`
+            })
+          }
           break
         case 'desserts score':
           this.lines.push({
@@ -109,6 +116,7 @@ export default {
             const altered = cmd.split(' ').map(s => s[0].toUpperCase()+s.substr(1)).join(' ')
             this.plays++
             if (rd.check(this.emoji, altered)) {
+              this.score++
               this.playing = false
               this.lines.push({
                 type: CliMessage,
@@ -121,11 +129,11 @@ export default {
               })
             }
           } else {
-            lines.push({
+            this.lines.push({
               type: CliError,
-              props: 'Command not recognised, read help below:'
+              props: 'Command not recognised, check the help below:'
             })
-            lines.push({
+            this.lines.push({
               type: CliHelp
             })
           }
