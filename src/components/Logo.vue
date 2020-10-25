@@ -65,11 +65,11 @@ export default {
 <style lang="postcss" scoped>
 
 .container {
-  @apply mt-10 ml-2 flex text-center relative;
+  @apply my-10 pl-2 flex text-center;
 }
 
 .prompt {
-  @apply text-white mr-3
+  @apply text-white mr-3;
 }
 
 </style>
